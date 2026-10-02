@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add to Cart</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <h1>My Shop</h1>
+    <!-- JS will change the number inside #cart-count (total quantity) -->
+    <div class="badge">🛒 Cart: <span id="cart-count">3</span></div>
+  </div>
+
+  <div class="layout">
+
+    <!-- ============ LEFT SIDE: PRODUCTS ============ -->
+    <div class="products">
+
+      <!-- Every card has the same shape.
+           The button carries 3 data- attributes (id, name, price).
+           JS reads them with:  btn.dataset.id / btn.dataset.name / btn.dataset.price -->
+
+      <div class="card">
+        <div class="product-img">👕</div>
+        <h3>T-Shirt</h3>
+        <p class="price">$10</p>
+        <button class="add-btn" data-id="1" data-name="T-Shirt" data-price="10">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="product-img">👟</div>
+        <h3>Shoes</h3>
+        <p class="price">$25</p>
+        <button class="add-btn" data-id="2" data-name="Shoes" data-price="25">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="product-img">🎧</div>
+        <h3>Headphones</h3>
+        <p class="price">$15</p>
+        <button class="add-btn" data-id="3" data-name="Headphones" data-price="15">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="product-img">⌚</div>
+        <h3>Watch</h3>
+        <p class="price">$20</p>
+        <button class="add-btn" data-id="4" data-name="Watch" data-price="20">Add to Cart</button>
+      </div>
+
+    </div>
+
+    <!-- ============ RIGHT SIDE: CART ============ -->
+    <div class="cart">
+      <h2>Your Cart</h2>
+
+      <!-- Shown only when the cart has 0 items.
+           Right now it is hidden because the sample rows below are showing. -->
+      <p class="empty hidden" id="empty-cart">Your cart is empty.</p>
+
+      <!-- JS puts the real cart items in here as <li> -->
+      <ul id="cart-items">
+
+        <!-- ================================================================
+             SAMPLE ROWS - only here so you can SEE the cart item design.
+
+             Every real item must have exactly this shape:
+
+               <li class="cart-item">
+                 <span class="item-name">T-Shirt</span>
+                 <div class="qty-box">
+                   <button class="qty-btn minus">-</button>
+                   <span class="item-qty">2</span>
+                   <button class="qty-btn plus">+</button>
+                 </div>
+                 <span class="item-total">$20</span>
+                 <button class="remove-btn">✕</button>
+               </li>
+
+               .item-name  = product name
+               .item-qty   = how many of this product are in the cart
+               .plus       = increase quantity by 1
+               .minus      = decrease quantity by 1
+               .item-total = quantity x price  ->  "2 x 10 = 20"
+               .remove-btn = take the whole row out
+
+             These samples disappear as soon as your JS renders the cart,
+             because your render should start with:
+
+               cartItems.innerHTML = ""
+
+             ================================================================ -->
+
+        <li class="cart-item">
+          <span class="item-name">T-Shirt</span>
+          <div class="qty-box">
+            <button class="qty-btn minus">-</button>
+            <span class="item-qty">2</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+          <span class="item-total">$20</span>
+          <button class="remove-btn">✕</button>
+        </li>
+
+        <li class="cart-item">
+          <span class="item-name">Shoes</span>
+          <div class="qty-box">
+            <button class="qty-btn minus">-</button>
+            <span class="item-qty">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+          <span class="item-total">$25</span>
+          <button class="remove-btn">✕</button>
+        </li>
+
+      </ul>
+
+      <div class="total-row">
+        <span>Total</span>
+        <!-- JS writes digits only here, e.g. 45 -->
+        <span>$<span id="cart-total">45</span></span>
+      </div>
+
+      <button class="clear-btn" id="clear-cart">Clear Cart</button>
+    </div>
+
+  </div>
+
+  <!-- cart.js is empty for now - that is the file you fill in during class -->
+  <script src="cart.js"></script>
+</body>
+</html>

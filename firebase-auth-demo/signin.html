@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>Sign In</h1>
+    <p class="sub">Step 2 of the flow: come back as an old user</p>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="you@example.com">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="your password">
+
+    <div class="checkbox-row">
+      <input type="checkbox" id="remember" checked>
+      <label for="remember">Keep me signed in on this device</label>
+    </div>
+
+    <button id="signinBtn">Sign In</button>
+
+    <!-- JS writes the error text in here -->
+    <p class="message" id="message"></p>
+
+    <p class="link">No account yet? <a href="signup.html">Create one</a></p>
+  </div>
+
+  <script type="module" src="signin.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <p id="loading">Checking your session...</p>
+
+  <div class="card hidden" id="dashboard">
+    <img class="avatar" id="avatar" alt="profile photo">
+
+    <h1 id="userName">-</h1>
+    <p class="sub" id="userEmail">-</p>
+
+    <div class="info-row">
+      <span class="key">User ID</span>
+      <span class="value" id="userUid">-</span>
+    </div>
+    <div class="info-row">
+      <span class="key">Signed in with</span>
+      <span class="value">Google</span>
+    </div>
+
+    <button class="secondary" id="signoutBtn">Sign Out</button>
+  </div>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

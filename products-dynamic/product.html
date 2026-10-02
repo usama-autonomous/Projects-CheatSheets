@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <a class="back" href="products.html">Back to all products</a>
+
+    <!-- One page, filled by JS depending on ?id= in the URL -->
+    <div class="detail hidden" id="detail">
+
+      <div class="detail-img" id="productEmoji"></div>
+
+      <div class="detail-info">
+        <span class="tag" id="productCategory"></span>
+        <h1 id="productName"></h1>
+        <p class="detail-price" id="productPrice"></p>
+        <p class="desc" id="productDescription"></p>
+        <p id="productStock"></p>
+        <button class="add-btn" id="addBtn">Add to Cart</button>
+      </div>
+
+    </div>
+
+    <!-- Shown when the id in the URL does not match any product -->
+    <div class="not-found hidden" id="notFound">
+      <h1>Product not found</h1>
+      <p class="sub">That id is not in our list.</p>
+      <a class="back" href="products.html">Back to all products</a>
+    </div>
+
+  </div>
+
+  <!-- Order matters: the data file must load first -->
+  <script src="products.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>

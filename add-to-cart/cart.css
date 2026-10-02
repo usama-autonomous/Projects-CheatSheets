@@ -1,0 +1,210 @@
+/* ---------- page ---------- */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ---------- top bar ---------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.badge {
+  background: #ff9800;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ---------- layout: products | cart ---------- */
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.products {
+  flex: 2 1 400px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.cart {
+  flex: 1 1 320px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* ---------- product card ---------- */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+}
+
+.product-img {
+  font-size: 45px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.price {
+  color: #666;
+  font-weight: bold;
+  margin: 0 0 12px;
+}
+
+/* ---------- buttons ---------- */
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.add-btn {
+  background: #ff9800;
+  color: white;
+  width: 100%;
+}
+
+.add-btn:hover {
+  background: #f57c00;
+}
+
+.clear-btn {
+  background: #222;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.clear-btn:hover {
+  background: #444;
+}
+
+/* ---------- cart list ---------- */
+.cart h2 {
+  font-size: 20px;
+  margin: 0 0 15px;
+}
+
+.empty {
+  color: #999;
+  font-size: 14px;
+}
+
+#cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.item-name {
+  flex: 1;
+}
+
+/* ---------- quantity stepper:  [-] 2 [+]  ---------- */
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.qty-btn {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: #eee;
+  color: #222;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.qty-btn:hover {
+  background: #ddd;
+}
+
+.item-qty {
+  min-width: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* "$20" - the total price of this one item */
+.item-total {
+  min-width: 46px;
+  text-align: right;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.remove-btn {
+  background: #eee;
+  color: #c62828;
+  padding: 4px 9px;
+}
+
+.remove-btn:hover {
+  background: #ddd;
+}
+
+/* ---------- total ---------- */
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: 2px solid #222;
+  margin-top: 15px;
+  padding-top: 12px;
+}
+
+/* ---------- JS uses this to hide and show things ---------- */
+.hidden {
+  display: none;
+}
+
+/* ---------- phone screens ---------- */
+@media (max-width: 700px) {
+  .layout {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,118 @@
+/* ---------- shared by both pages ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  color: #222;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  width: 100%;
+  max-width: 360px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0 0 5px;
+}
+
+.sub {
+  color: #777;
+  font-size: 14px;
+  margin: 0 0 22px;
+  word-break: break-all;
+}
+
+/* ---------- profile photo from Google ---------- */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+/* ---------- the Google button ---------- */
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  background: white;
+  color: #3c4043;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.google-btn:hover {
+  background: #f8f9fa;
+  border-color: #c6c9cc;
+}
+
+.secondary {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 22px;
+}
+
+.secondary:hover {
+  background: #444;
+}
+
+/* ---------- text ---------- */
+.message {
+  color: #c62828;
+  font-size: 14px;
+  min-height: 20px;
+  margin: 12px 0 0;
+}
+
+/* ---------- dashboard rows ---------- */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  text-align: left;
+}
+
+.key {
+  color: #777;
+}
+
+.value {
+  font-weight: bold;
+  text-align: right;
+  word-break: break-all;
+}
+
+/* ---------- show / hide with JS ---------- */
+.hidden {
+  display: none;
+}

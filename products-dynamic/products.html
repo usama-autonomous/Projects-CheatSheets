@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <h1>All Products</h1>
+    <!-- JS writes the number of products here -->
+    <p class="sub" id="count"></p>
+
+    <!-- The cards are NOT written here. JS builds them from products.js -->
+    <div class="grid" id="product-grid"></div>
+
+  </div>
+
+  <!-- Order matters: the data file must load first -->
+  <script src="products.js"></script>
+  <script src="list.js"></script>
+</body>
+</html>
